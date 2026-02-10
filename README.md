@@ -53,6 +53,7 @@ Create a `.env` file in the frontend directory and add your backend API URL:
 API_URL=https://your-backend-api-url.com
 ```
 ## 🚀 How to Use the Application
+Demo video :- https://youtu.be/hSUKm8aTYx0
 ### 📝 Create a Note
 1. Open the homepage (`/`)  
 2. Enter a note (maximum 500 characters)  
