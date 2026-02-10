@@ -2,7 +2,7 @@
 
 Secure Notes is a full-stack web application that allows users to create password-protected private notes, share them via a unique secure link, and optionally generate an AI-based summary of the note content.
 
-Test Link - https://secure-notes-u3ul.vercel.app/
+Testing - https://secure-notes-u3ul.vercel.app/
 
 The application ensures that notes are:
 
