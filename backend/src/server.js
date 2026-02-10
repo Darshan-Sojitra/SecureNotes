@@ -8,3 +8,7 @@ const connectDB = require("./config/db");
 
 connectDB();
 
+module.exports = app;
+app.get("/", (req, res) => {
+    res.send("SecureNotes backend running");
+});
