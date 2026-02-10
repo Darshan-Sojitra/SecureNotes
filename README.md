@@ -30,7 +30,7 @@ cd securenote
 ```
 2️⃣ **Backend Setup**
 ```bash
-dc backend
+cd backend
 npm install 
 ```
 Create a `.env` file inside the `backend/` directory:
@@ -44,7 +44,7 @@ node src/server.js
 ```
 3️⃣ **Frontend Setup**
 ```bash
-dc ../frontend
+cd ../frontend
 npm install 
 npm run dev 
 ```
