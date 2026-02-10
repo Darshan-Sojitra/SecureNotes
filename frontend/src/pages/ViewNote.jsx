@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import { API_URL } from "../config";
 
 function ViewNote() {
     const { id } = useParams();
@@ -26,7 +27,7 @@ function ViewNote() {
             setLoading(true);
 
             const res = await fetch(
-                `https://secure-notes-backend-beta.vercel.app/api/notes/${id}/unlock`,
+                `${API_URL}/api/notes/${id}/unlock`,
                 {
                     method: "POST",
                     headers: {
@@ -64,7 +65,7 @@ function ViewNote() {
 
         try {
             const res = await fetch(
-                `https://secure-notes-backend-beta.vercel.app/api/notes/${id}/summarize`,
+                `${API_URL}/api/notes/${id}/summarize`,
                 {
                     method: "GET",
                 }

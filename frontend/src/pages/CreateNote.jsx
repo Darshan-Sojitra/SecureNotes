@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { API_URL } from "../config";
+
 
 function CreateNote() {
     const [text, setText] = useState("");
@@ -29,7 +31,7 @@ function CreateNote() {
         try {
             setLoading(true);
 
-            const res = await fetch("https://secure-notes-backend-beta.vercel.app/api/notes/create", {
+            const res = await fetch(`${API_URL}/api/notes/create`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
