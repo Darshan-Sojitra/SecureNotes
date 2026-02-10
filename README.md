@@ -1,31 +1,35 @@
 🔐 Secure Notes – Private Note Sharing App
 
-Secure Notes is a full-stack web application that allows users to create password-protected private notes, share them via a unique link, and optionally generate an AI-based summary of the note content.
+Secure Notes is a full-stack web application that allows users to create password-protected private notes, share them via a unique secure link, and optionally generate an AI-based summary of the note content.
 
 The application ensures that notes are:
-Immutable after creation
-Accessible only with the correct password
-Readable but not editable
-Shareable via a secure link
+
+🔒 Immutable after creation
+
+🔑 Accessible only with the correct password
+
+👁️ Readable but not editable
+
+🔗 Shareable via a secure link
 
 🛠 Tech Stack
 Frontend
 
 React (Vite)
-Tailwind CSS
 
+Tailwind CSS
 
 Backend
 
 Node.js
+
 Express.js
+
 MongoDB (Mongoose)
 
 AI Integration
 
-AI summarization service (Gemini - gemini-2.5-flash)
-
-
+Gemini AI – gemini-2.5-flash for note summarization
 
 ⚙️ Setup Instructions
 1️⃣ Clone the Repository
@@ -37,43 +41,44 @@ cd backend
 npm install
 
 
-Create a .env file inside backend/:
+Create a .env file inside the backend/ directory:
 
 MONGO_URI=your_mongodb_connection_string
-GEMINI_API_KEY=your gemini api key
+GEMINI_API_KEY=your_gemini_api_key
+
 
 Start the backend server:
 
 node src/server.js
-
-
 
 3️⃣ Frontend Setup
 cd ../frontend
 npm install
 npm run dev
 
-Add you backend api base url in env
-API_URL=https://secfaskfnsdfsf.app(example)
 
+Create a .env file in the frontend directory and add your backend API URL:
 
+VITE_API_URL=https://your-backend-api-url.com
 
 🚀 How to Use the Application
 📝 Create a Note
 
 Open the homepage (/)
 
-Enter a note (max 500 characters)
+Enter a note (maximum 500 characters)
 
 Click Create Note
 
-Confirm the dialog (note becomes non-editable)
+Confirm the dialog
+
+⚠️ The note becomes non-editable after confirmation
 
 Copy:
 
-The generated shareable link
+🔗 The shareable link
 
-The password
+🔑 The password
 
 🔓 View / Unlock a Note
 
@@ -81,43 +86,44 @@ Open the shared link (/note/:id)
 
 Enter the password
 
-On success:
+On successful verification:
 
-The note is displayed (read-only)
+📄 The note is displayed (read-only)
 
-You can copy the note content
+📋 You can copy the note content
 
 🤖 AI Summarization
 
-After unlocking the note
+Unlock the note
 
 Click “Summarize using AI”
 
-A loading indicator is shown
+A loading indicator appears
 
 The AI-generated summary is displayed below the note
 
 🔐 Security & Design Considerations
 
-Notes are not editable after creation
+Notes are immutable after creation
 
-Password verification is done server-side
+Password verification is handled server-side
 
-Note content is returned only after successful unlock
+Note content is returned only after successful authentication
 
 AI summarization is a separate protected action
 
+No direct note editing or overwriting allowed
 
 🔮 Future Improvements
 
-Add note expiration (self-destruct) timers
+⏳ Note expiration / self-destruct timers
 
-Rate-limiting and brute-force protection on password attempts
+🚫 Rate-limiting & brute-force protection
 
-Optional end-to-end encryption for note content
+🔐 Optional end-to-end encryption (E2EE)
 
-User accounts to manage multiple notes
+👤 User accounts to manage multiple notes
 
-Replace mock AI with a production LLM (Gemini / OpenAI)
+🤖 Replace mock AI with production LLMs (Gemini / OpenAI)
 
-Deploy using Docker and cloud hosting
+🐳 Docker-based deployment with cloud hosting
