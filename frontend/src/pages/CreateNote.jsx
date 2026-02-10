@@ -29,7 +29,7 @@ function CreateNote() {
         try {
             setLoading(true);
 
-            const res = await fetch("http://localhost:5000/api/notes/create", {
+            const res = await fetch("http://secure-notes-9zfz.vercel.app/api/notes/create", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -107,12 +107,12 @@ function CreateNote() {
                         <div className="mb-2">
                             <p className="text-sm break-all">
                                 <span className="font-semibold">Link:</span>{" "}
-                                http://localhost:5173/note/{result.noteId}
+                                http://secure-notes-u3ul.vercel.app/note/{result.noteId}
                             </p>
                             <button
                                 onClick={() =>
                                     copyToClipboard(
-                                        `http://localhost:5173/note/${result.noteId}`
+                                        `http://secure-notes-u3ul.vercel.app/note/${result.noteId}`
                                     )
                                 }
                                 className="text-sm text-blue-400 hover:underline mt-1"
