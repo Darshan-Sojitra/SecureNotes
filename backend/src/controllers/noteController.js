@@ -1,6 +1,7 @@
 const Note = require("../models/note");
 const crypto = require("crypto");
 const { generateSummary } = require("../services/geminiService");
+const mongoose = require("mongoose");
 
 exports.createnote = async (req, res) => {
     try {
@@ -39,6 +40,12 @@ exports.unlocknote = async (req, res) => {
     try {
         const { id } = req.params;
         const { password } = req.body;
+
+
+
+        if (!mongoose.Types.ObjectId.isValid(id)) {
+            return res.status(400).json({ error: "Invalid note ID" });
+        }
 
         const note = await Note.findById(id);
 
