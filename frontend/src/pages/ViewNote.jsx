@@ -26,7 +26,7 @@ function ViewNote() {
             setLoading(true);
 
             const res = await fetch(
-                `http://secure-notes-9zfz.vercel.app/api/notes/${id}/unlock`,
+                `http://secure-notes-backend-beta.vercel.app/api/notes/${id}/unlock`,
                 {
                     method: "POST",
                     headers: {
@@ -64,7 +64,7 @@ function ViewNote() {
 
         try {
             const res = await fetch(
-                `http://secure-notes-9zfz.vercel.app/api/notes/${id}/summarize`,
+                `http://secure-notes-backend-beta.vercel.app/api/notes/${id}/summarize`,
                 {
                     method: "GET",
                 }
