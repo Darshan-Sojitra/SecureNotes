@@ -76,13 +76,13 @@ API_URL=https://your-backend-api-url.com
 ### 🔐 Security & Design Considerations
 - Notes are immutable after creation  
 - Password verification is handled server-side  
-eNote content is returned only after successful authentication 
-eNo direct note editing or overwriting allowed   
+- Note content is returned only after successful authentication 
+- No direct note editing or overwriting allowed   
 ### 🔮 Future Improvements 
-⏳ Note expiration / self-destruct timers 
-🚫 Rate-limiting & brute-force protection 
-🔐 Optional end-to-end encryption 
-🗃️ Support different data(images, videos, pdfs, etc..)
-👤 User accounts to manage multiple notes 
-🤖 Replace mock AI with production LLMs (Gemini / OpenAI) 
-🐳 Docker-based deployment with cloud hosting
+- ⏳ Note expiration / self-destruct timers 
+- 🚫 Rate-limiting & brute-force protection 
+- 🔐 Optional end-to-end encryption 
+- 🗃️ Support different data(images, videos, pdfs, etc..)
+- 👤 User accounts to manage multiple notes 
+- 🤖 Replace mock AI with production LLMs (Gemini / OpenAI) 
+- 🐳 Docker-based deployment with cloud hosting
