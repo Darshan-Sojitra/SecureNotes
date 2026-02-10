@@ -29,7 +29,7 @@ function CreateNote() {
         try {
             setLoading(true);
 
-            const res = await fetch("http://secure-notes-backend-beta.vercel.app/api/notes/create", {
+            const res = await fetch("https://secure-notes-backend-beta.vercel.app/api/notes/create", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
